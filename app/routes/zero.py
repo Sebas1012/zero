@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, redirect, flash
+from flask import Blueprint, render_template, redirect, flash, session
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, IntegerRangeField, BooleanField
 import random
@@ -13,7 +13,6 @@ class GeneratedPassword(FlaskForm):
     include_uppercase = BooleanField('Include uppercase')
     include_numbers = BooleanField('Include numbers')
     include_symbols = BooleanField('Include symbols')
-    # generate_password = SubmitField('', id='generate')
 
 def generate(length, use_lower=True, use_upper=True, use_digits=True, use_punctuation=True):
     characters = ""

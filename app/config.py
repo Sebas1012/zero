@@ -1,2 +1,4 @@
+import os
+
 class Config:
-    SECRET_KEY = '5f6c499a766dadc5145cc7e3cd62401e'
+    SECRET_KEY = os.environ.get('SECRET_KEY')

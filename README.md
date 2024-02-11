@@ -1,3 +1,5 @@
+![CI/CD](https://github.com/Sebas1012/zeropass/actions/workflows/PublishDockerImage.yml/badge.svg)
+
 <p align="center">
 <img src="https://i.ibb.co/9wKgytv/Logo.png" alt="1" border="0" width=150 height=150>
 </p>

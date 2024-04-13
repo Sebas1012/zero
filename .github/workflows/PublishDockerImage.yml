@@ -1,8 +1,13 @@
 on: push
 name: deploy
+
+env:
+    image_tag: ${{ github.ref == 'refs/heads/main' && 'zero-app:latest' || (github.ref == 'refs/heads/develop' && 'zero-app:beta') }}
+    docker_user: ${{ secrets.DOCKERHUB_USERNAME }}
+
 jobs:
     deploy:
-        name: Deploy ZeroApp on Docker Hub
+        name: Deploy MergePDF on Docker Hub
         runs-on: ubuntu-latest
         steps:
             -
@@ -21,4 +26,5 @@ jobs:
                   context: .
                   file: ./Dockerfile
                   push: true
-                  tags: ${{ secrets.DOCKERHUB_USERNAME }}/zero-app:latest
+                  tags: |
+                    ${{ env.docker_user }}/${{ env.image_tag }}

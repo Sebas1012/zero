@@ -20,6 +20,32 @@ ZeroPass es un generador de contraseñas fácil de usar. Con ZeroPass puedes gen
 4. Copia la contraseña generada en el portapapeles.
 5. Utiliza la contraseña generada en tu sitio web, aplicación o sistema.
 
+## Importante⚠️:
+
+No olvides reemplazar en el [Dockerfile](Dockerfile) la variable de entorno `SECRET_KEY` con cualquier token generado por ti.
+
+## Ejecutar con Docker:
+
+Para ejecutar la aplicacion solo basta con ejecutar el siguiente comando:
+
+```
+docker run -p 80:5000 pdfmerger:latest
+```
+
+## Ejecutar con Python:
+
+Para ejecutar con python primero deberiamos crear un entorno virtual he instalar las dependencias necesarias con el comando:
+
+```
+pip install -r requirements.txt
+```
+
+Luego podemos lanzar la app con el comando:
+
+```
+flask --app main.py run
+```
+
 ## Requisitos:
 ZeroPass es una aplicación web, lo que significa que puedes acceder a ella desde cualquier navegador web moderno, incluyendo Google Chrome, Mozilla Firefox, Apple Safari y Microsoft Edge.
 

@@ -7,7 +7,7 @@ env:
 
 jobs:
     deploy:
-        name: Deploy MergePDF on Docker Hub
+        name: Deploy Zeropass on Docker Hub
         runs-on: ubuntu-latest
         steps:
             -

@@ -29,7 +29,7 @@ No olvides reemplazar en el [Dockerfile](Dockerfile) la variable de entorno `SEC
 Para ejecutar la aplicacion solo basta con ejecutar el siguiente comando:
 
 ```
-docker run -p 80:5000 pdfmerger:latest
+docker run -p 80:5000 zero-app:latest
 ```
 
 ## Ejecutar con Python:

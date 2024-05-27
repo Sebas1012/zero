@@ -14,7 +14,7 @@ ZeroPass es un generador de contraseñas fácil de usar. Con ZeroPass puedes gen
 - **Interfaz fácil de usar**: ZeroPass tiene una interfaz fácil de usar y es accesible para todos los usuarios.
 
 ## Cómo usar:
-1. Visita el sitio web oficial de [ZeroPass](https://zero-q58k.onrender.com/).
+1. Visita el sitio web oficial de [ZeroPass](https://zeropass.vercel.app/password).
 2. Selecciona la longitud y complejidad de la contraseña que deseas generar.
 3. Haz clic en el botón "Generar contraseña".
 4. Copia la contraseña generada en el portapapeles.

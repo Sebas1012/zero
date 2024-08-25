@@ -2,7 +2,7 @@ on: push
 name: deploy
 
 env:
-    image_tag: ${{ github.ref == 'refs/heads/main' && 'zero-app:latest' || (github.ref == 'refs/heads/develop' && 'zero-app:beta') }}
+    image_tag: ${{ github.ref == 'refs/heads/main' && 'zeropass:latest' || (github.ref == 'refs/heads/develop' && 'zeropass:beta') }}
     docker_user: ${{ secrets.DOCKERHUB_USERNAME }}
 
 jobs:

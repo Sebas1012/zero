@@ -1,15 +1,13 @@
-FROM python:3.9.17-alpine3.18
+FROM python:3.12.5-alpine3.20
 
-EXPOSE 5000
+EXPOSE 8000
 
-ENV SECRET_KEY=51abff7336af65dc3989d491aefd5e8b
+RUN mkdir -p /usr/src/zeropass
 
-RUN mkdir -p /usr/src/zeroapp
-
-WORKDIR /usr/src/zeroapp
+WORKDIR /usr/src/zeropass
 
 COPY . ./
 
 RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
 
-CMD [ "flask", "--app", "main.py", "--debug", "run", "--host=0.0.0.0" ]
+CMD [ "gunicorn", "main:app", "--bind=0.0.0.0", "--log-level=debug" ]

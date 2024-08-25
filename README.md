@@ -22,15 +22,20 @@ ZeroPass es un generador de contraseñas fácil de usar. Con ZeroPass puedes gen
 
 ## Importante⚠️:
 
-No olvides reemplazar en el [Dockerfile](Dockerfile) la variable de entorno `SECRET_KEY` con cualquier token generado por ti.
+Para hacer un build local de la imagen debes usar los siguientes comandos.
+```
+docker build -t zeropass:test .
+```
 
 ## Ejecutar con Docker:
 
 Para ejecutar la aplicacion solo basta con ejecutar el siguiente comando:
 
 ```
-docker run -p 80:5000 zero-app:latest
+docker run -p 8080:8000 --env-file .env zeropass:latest
 ```
+
+Recuerda contar con un .env similar al que tienes de ejemplo llamado `.env.example`
 
 ## Ejecutar con Python:
 
